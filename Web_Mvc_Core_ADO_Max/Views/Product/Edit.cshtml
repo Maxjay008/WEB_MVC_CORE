@@ -1,0 +1,34 @@
+﻿@model Web_Mvc_Core_ADO_Max.Models.Product_Max
+<h2>Store Max</h2>
+<h4>Изменить продукт</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div class="form-group">
+                <label class="control-label">Продукт</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Описание</label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Файл изображения</label>
+                <input asp-for="Image_Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Цена</label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Select_Product">Назад к списку продуктов</a>
+</div>

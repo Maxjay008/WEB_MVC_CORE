@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Max.</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <!--меню-->
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="~/Home/Index" class="navbar-brand">Главная</a></li>
+                <li><a href="~/Home/About" class="navbar-brand">Обо мне</a></li>
+                <li><a href="~/Product/Create" class="navbar-brand">Ввод продукта</a></li>
+                <li><a href="~/Product/Select_Product" class="navbar-brand">Продукты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--основной контент-->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Day/@DateTime.Now.Month/@DateTime.Now.Year - Приложение ASP.NET Core, Разработчик: Max, гр. 32пивл, СМОЛГУ, ФИЗМАТ</p>
+        </footer>
+    </div>
+</body>
+</html>

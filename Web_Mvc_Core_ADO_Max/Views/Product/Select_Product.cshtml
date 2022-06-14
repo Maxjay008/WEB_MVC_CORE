@@ -1,0 +1,26 @@
+﻿@using Web_Mvc_Core_ADO_Max.Models;
+@model List<Product_Max>
+<h2>Магазин x</h2>
+<table border="1">
+    <tr>
+        <th>Номер</th>
+        <th>Продукт</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Фото</th>
+        <th>Изменить</th>
+        <th>Удалить</th>
+    </tr>
+    @foreach (Product_Max item in Model)
+    {
+        <tr>
+            <td> @item.ID </td>
+            <td> @item.Name.ToString() </td>
+            <td> @item.Description.ToString() </td>
+            <td> @item.Price.ToString() </td>
+           <td> <img src="~/Images/@item.Image_Name" width="70" height="70"> </td>
+            <td><a class="btn btn-primary" href="@Url.Action("Edit", "Product", new {ID=item.ID})">Изменить</a></td>
+            <td><a class="btn btn-primary" href="@Url.Action("Delete", "Product", new {ID=item.ID})">Удалить</a></td>
+        </tr>
+    }
+</table>
